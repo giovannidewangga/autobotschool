@@ -2,6 +2,20 @@
 #include <MFRC522.h> // Include MFRC522 library for RFID
 #include <Wire.h> // Include Wire library for I2C devices
 
+/*
+wiring
+3.3V3 -> 3V3
+RST -> D22
+GND -> GND
+MISO -> D19
+MOSI -> D23
+SCK -> D18
+SDA -> D21
+
+Library RFID
+MFRC522 by Github Community
+*/
+
 #define SS_PIN 21 // Define Slave Select pin for SPI
 #define RST_PIN 22 // Define Reset pin for MFRC522
 const int LED1 = 5; // Define pin for LED1
@@ -11,6 +25,7 @@ const int Echo = 25; // Define pin for Echo of Ultrasonic Sensor
 float jarak, waktu; // Declare variables for distance and time
 
 #define Suara 0.034 // Define speed of sound in cm/us
+
 
 MFRC522 mfrc522(SS_PIN, RST_PIN); // Create MFRC522 instance
 

@@ -1,5 +1,19 @@
+/*
+Code usage is for ESP32 with Expansion board by kelasrobot.com
+*/
+
 #include <LiquidCrystal_I2C.h>
 //LiquidCrystal I2C Library by Frank de Brabander
+
+/*
+Wiring for ESP32:
+VCC-> 5V
+GND-> GND
+SDA-> D21
+SCL-> D22
+Or simply using LCD I2C port offered by ESP32 Expansion Board by kelasrobot.com
+*/
+
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 /*Making variabel "lcd" and
